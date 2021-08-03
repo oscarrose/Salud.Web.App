@@ -11,24 +11,24 @@ namespace Salud.Web.App.Services
     {
         public static async Task CreateRoles(IServiceProvider serviceProvider)
         {
-            var RoleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            //var RoleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
-            var UserManager = serviceProvider.GetRequiredService<UserManager<IdentityUser>>();
+            //var UserManager = serviceProvider.GetRequiredService<UserManager<IdentityUser>>();
 
-            var roles = new List<string>() { "Doctor", "Secretary" };
+            //var roles = new List<string>() { "Doctor", "Secretary" };
 
-            foreach (var item in roles)
-            {
-                if (!await RoleManager.RoleExistsAsync(item)) {  
-                    await RoleManager.CreateAsync(new IdentityRole(item));
+            //foreach (var item in roles)
+            //{
+            //    if (!await RoleManager.RoleExistsAsync(item)) {  
+            //        await RoleManager.CreateAsync(new IdentityRole(item));
               
-                }
+            //    }
 
-                IdentityUser user = await UserManager.FindByIdAsync("brookvivir@gmail.com");
+            //    IdentityUser user = await UserManager.FindByIdAsync("brookvivir@gmail.com");
 
-                await UserManager.AddToRoleAsync(user,"Doctor");
+            //    await UserManager.AddToRoleAsync(user,"Doctor");
 
-            }
+            //}
         }
 
 
