@@ -28,11 +28,13 @@ namespace Salud.Web.App
             //    catch (Exception ex)
             //    {
 
-            //        var logger = services.GetRequiredService<ILogger<Program>>();
+            //        var logger = services.GetRequiredService<ILo
+            //        gger<Program>>();
             //        logger.LogError(ex, "Error ocurred while seeding the database");
             //    }
 
             //}
+
             //host.Run();
             CreateHostBuilder(args).Build().Run();
         }
@@ -44,5 +46,9 @@ namespace Salud.Web.App
                    webBuilder.UseStartup<Startup>();
                });
 
+        //public static IWebHost BuildWebHost(string[] args) =>
+        //  WebHost.CreateDefaultBuilder(args)
+        //     .UseStartup<Startup>()
+        //    .Build();
     }
 }

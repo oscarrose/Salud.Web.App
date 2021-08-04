@@ -28,13 +28,20 @@ using Salud.Web.App;
 #nullable disable
 #nullable restore
 #line 3 "C:\Users\oscar\OneDrive - Universidad Central del Este\universidad ing. Software\Septimo cuatrimestre\programacion avanzada\Proyecto final\Salud.Web.App\Pages\_ViewImports.cshtml"
+using Salud.Web.App.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\oscar\OneDrive - Universidad Central del Este\universidad ing. Software\Septimo cuatrimestre\programacion avanzada\Proyecto final\Salud.Web.App\Pages\_ViewImports.cshtml"
 using Salud.Web.App.Data;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b42fbb362cafdba7c301c3ad7d93b0cb0d9f1720", @"/Pages/About.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e18c3c272ae2f95d9da0f66bfcc816d7d14004a2", @"/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5672686da291e7c19de3c4c32741c8441391c0a2", @"/Pages/_ViewImports.cshtml")]
     public class Pages_About : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
         #line hidden
@@ -78,7 +85,7 @@ Write(ViewData["Title"]);
 #line hidden
 #nullable disable
             WriteLiteral("</h1>\r\n\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b42fbb362cafdba7c301c3ad7d93b0cb0d9f17204274", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b42fbb362cafdba7c301c3ad7d93b0cb0d9f17204562", async() => {
                 WriteLiteral("\r\n\r\n    <p>health web app useful for patient management and medical services.</p>\r\n\r\n");
             }
             );

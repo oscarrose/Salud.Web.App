@@ -33,10 +33,25 @@ namespace Salud.Web.App
                 options.UseSqlServer(
                     Configuration.GetConnectionString("SaludWepAppConnection")));
 
+            //Configure dbcontext of models
+            services.AddDbContext<SaludWebAppContext>((options)=>
+             {
+                 options.UseSqlServer(Configuration.GetConnectionString("SaludWepAppConnection"));
+
+            });
+
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddRazorPages();
+
+
+
+
+            //services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+            //    .AddEntityFrameworkStores<ApplicationDbContext>()
+            //.AddDefaultTokenProviders();
+
 
             // requires
             // using Microsoft.AspNetCore.Identity.UI.Services;
@@ -45,13 +60,13 @@ namespace Salud.Web.App
             services.AddTransient<IEmailSender, EmailSender>();
             services.Configure<AuthMessageSenderOptions>(Configuration);
 
-            //for the token configurations
+
             //services.Configure<DataProtectionTokenProviderOptions>(o =>
             //{
             //    o.Name = "Default";
             //    o.TokenLifespan = TimeSpan.FromHours(1);
 
-            // });
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
