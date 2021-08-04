@@ -39,6 +39,7 @@
                 @if (SignInManager.IsSignedIn(User))
                 {
                     <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Patients/Index">Patients</a>
                    
                 }
                 else

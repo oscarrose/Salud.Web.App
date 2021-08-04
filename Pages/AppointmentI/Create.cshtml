@@ -1,0 +1,56 @@
+﻿@page
+@model Salud.Web.App.Pages.AppointmentI.CreateModel
+
+<h4>Appointment</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Appointment.AccountDoctorId" class="control-label"></label>
+                <select asp-for="Appointment.AccountDoctorId" class ="form-control" asp-items="ViewBag.AccountDoctorId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Appointment.PatientId" class="control-label"></label>
+                <select asp-for="Appointment.PatientId" class ="form-control" asp-items="ViewBag.PatientId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Appointment.DateAppointments" class="control-label"></label>
+                <input asp-for="Appointment.DateAppointments" class="form-control" />
+                <span asp-validation-for="Appointment.DateAppointments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Appointment.StartTime" class="control-label"></label>
+                <input asp-for="Appointment.StartTime" class="form-control" />
+                <span asp-validation-for="Appointment.StartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Appointment.EndTime" class="control-label"></label>
+                <input asp-for="Appointment.EndTime" class="form-control" />
+                <span asp-validation-for="Appointment.EndTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Appointment.Comment" class="control-label"></label>
+                <input asp-for="Appointment.Comment" class="form-control" />
+                <span asp-validation-for="Appointment.Comment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Appointment.SendEmailConfirmed" class="control-label"></label>
+                <input asp-for="Appointment.SendEmailConfirmed" class="form-control" />
+                <span asp-validation-for="Appointment.SendEmailConfirmed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

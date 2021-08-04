@@ -1,0 +1,129 @@
+﻿@page
+@model Salud.Web.App.Pages.Patients.CreateModel
+
+<h2>Patient</h2>
+<hr />
+
+<form method="post">
+    <div class="container">
+        <div class="row">
+
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="col-lg-4">
+                <label asp-for="Patient.FirstName" class="control-label"></label>
+                <input asp-for="Patient.FirstName" class="form-control" />
+                <span asp-validation-for="Patient.FirstName" class="text-danger"></span>
+            </div>
+            <div class="col-lg-4">
+                <label asp-for="Patient.LastName" class="control-label"></label>
+                <input asp-for="Patient.LastName" class="form-control" />
+                <span asp-validation-for="Patient.LastName" class="text-danger"></span>
+            </div>
+            <div class="col-lg-4">
+                <label asp-for="Patient.Dni" class="control-label"></label>
+                <input asp-for="Patient.Dni" class="form-control" />
+                <span asp-validation-for="Patient.Dni" class="text-danger"></span>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    <div class="container">
+        <div class="row">
+            <div class="col order- first">
+                <label asp-for="Patient.DateBirth" class="control-label"></label>
+                <input asp-for="Patient.DateBirth" class="form-control" />
+                <span asp-validation-for="Patient.DateBirth" class="text-danger"></span>
+            </div>
+            <div class="col">
+                <label asp-for="Patient.NumberPhone" class="control-label"></label>
+                <input asp-for="Patient.NumberPhone" class="form-control" />
+                <span asp-validation-for="Patient.NumberPhone" class="text-danger"></span>
+            </div>
+            <div class="col order-last">
+                <label asp-for="Patient.Country" class="control-label"></label>
+                <input asp-for="Patient.Country" class="form-control" />
+                <span asp-validation-for="Patient.Country" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col order- first">
+                <label asp-for="Patient.City" class="control-label"></label>
+                <input asp-for="Patient.City" class="form-control" />
+                <span asp-validation-for="Patient.City" class="text-danger"></span>
+            </div>
+            <div class="col">
+                <label asp-for="Patient.Street" class="control-label"></label>
+                <input asp-for="Patient.Street" class="form-control" />
+                <span asp-validation-for="Patient.Street" class="text-danger"></span>
+            </div>
+            <div class="col order-last">
+                <label asp-for="Patient.HealthInsurance" class="control-label"></label>
+                <input asp-for="Patient.HealthInsurance" class="form-control" />
+                <span asp-validation-for="Patient.HealthInsurance" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col order- first">
+                <label asp-for="Patient.Disease" class="control-label"></label>
+                <input asp-for="Patient.Disease" class="form-control" />
+                <span asp-validation-for="Patient.Disease" class="text-danger"></span>
+            </div>
+            <div class="col">
+                <label asp-for="Patient.AllergicMedicine" class="control-label"></label>
+                <input asp-for="Patient.AllergicMedicine" class="form-control" />
+                <span asp-validation-for="Patient.AllergicMedicine" class="text-danger"></span>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-auto me-auto">
+                <input type="submit" value="Create" class="btn btn-primary" />
+
+            </div>
+
+            <div class="col-10">
+                <a class="btn btn-secondary" asp-page="Index">Back to List</a>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+
+</form>
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
